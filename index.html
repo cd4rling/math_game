@@ -5,21 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
+    <title>The 10 Second Math Game!!!</title>
+
     <script src="https://kit.fontawesome.com/58fbb49a80.js" crossorigin="anonymous"></script>  
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-    <link href="style.css" rel="stylesheet" />
-    <title>The 10 Second Math Game!!!</title>
 </head>
 <body>
-   <div class="container">
     <div class="hero">
-        <!--game title images and score info-->
+        <!-- Game title images and score info -->
     </div>
-    <div class="gameBox">
-        <!--game play area-->
-    </div>
-   </div> 
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 timerBox" id="timer">
+                <!-- Countdown timer here -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- Game play area -->
+                <div class="problemBox">
+                    <!-- Math problem here -->
+                </div>
+                <div class="answerBox">
+                    <!-- Parameters here -->
+                    <input type="input" id="user-answer" autofocus><br>
+                    <button type="button" class="btnMath active" id="add"><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" class="btnMath" id="subtract"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="btnMath" id="multiply"><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="btnMath" id="divide"><i class="fa-solid fa-divide"></i></button>
+                    <br>
+                    <label for="number-limit">Number Limit: </label><h4 id="numLimit"></h4>
+                    <input id="number-limit" type="range" min="10" max="50" step="5" value="10">
+                </div>
+                <div class="scoreBox">
+                    <div class="col-xs-6" id="score">
+                        Score:
+                    </div>
+                    <div class="col-xs-6" id="highScore">
+                        High Score:
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
 </body>
 </html>

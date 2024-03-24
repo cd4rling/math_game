@@ -1,0 +1,120 @@
+body {
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+    
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */  
+    background: linear-gradient(to top right,rgb(247, 180, 100), rgb(223,90, 0));
+    background-color: rgb(247, 181, 100);
+
+}
+
+.container {
+    text-align: center;
+    align-items: center;
+    min-height: 70vh; /* Ensure the body takes up at least the full viewport height */
+    min-width:50vw;
+    max-width: 70vw;
+    background-color: rgb(63,126,166);
+    border: 5px solid rgb(32, 117, 171);
+    border-radius: 20px;
+    color: white;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */  
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.6);
+}
+.timerBox {
+    margin: 10px;
+}
+
+.problemBox {
+    text-align: center;
+    align-items: center;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 2px solid rgb(32, 117, 171);
+    background-color: rgba(0,0,0,.3);
+    max-width: 200px;
+    height: 50px;
+    margin:auto;
+}
+
+.answerBox {
+    text-align: center;
+    margin: auto;   
+}
+
+.testBox {
+    border: 3px solid black;
+}
+
+.btnMath {
+    background-color: rgb(247,181,100);
+    border: 2px solid rgb(32, 117, 171);
+    border-radius: 10px;
+}
+
+.btnMath:hover {
+    box-shadow: inset 0 0 10px -1px rgba(0, 0, 0, 0.5);
+}
+
+.active {
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+    color: black;
+}
+
+input[type="input"] {
+    border-radius: 10px;
+    margin: 15px;
+    color: black;
+    text-align: center;
+    max-width: 200px;
+    height: 80px;
+}
+
+input[type="range"] {
+    /* Set the width and height */
+    max-width: 200px;
+    height: 10px;
+    display: block;
+    margin: 0 auto;
+    /* Remove the default styling */
+    -webkit-appearance: none;
+    appearance: none;
+    /* Set the background color */
+    background-color: transparent;
+    /* Add rounded corners */
+    border-radius: 5px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling the slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+    /* Set the width and height */
+    width: 15px;
+    height: 25px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgb(223,90,0);
+    border-radius: 30%;
+    /* Center the thumb vertically */
+    margin-top: -7px;
+    cursor:pointer;
+}
+
+/* Styling the slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+    /* Set the height */
+    height: 10px;
+    /* Set the background color */
+    background-color: rgb(169,169,169);
+    /* Add rounded corners */
+    border-radius: 5px;
+    max-width: 100%;
+}
