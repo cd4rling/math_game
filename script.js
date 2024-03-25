@@ -122,8 +122,8 @@ $(document).ready(function() {
                 };
             } else {
                 // If the result is not an integer, generate new random numbers and try again
-                this.getRandomInt();
-                return this.divide(this.mathNumbers[0], this.mathNumbers[1]);
+            let newNums = getRandomInt();
+            return this.divide(newNums[0], newNums[1]);
             }
         }
         
@@ -133,13 +133,19 @@ $(document).ready(function() {
     function gamePlay() {
         $("#user-answer").val("");
         let mathOperators = mathCheck();
-        let operator = Object.keys(mathOperators).find(key => mathOperators[key]);
+        console.log(mathOperators);
+        let operator = Object.keys(mathOperators).filter(key => mathOperators[key]);
         if (!operator) {
             alert("Choose a math operator");
             return;
         }
+        console.log(operator);
+        let randomIndex = Math.floor(Math.random() * (operator.length));
+        console.log("random index is: " + randomIndex);
+        let selectOperator = operator[randomIndex];
+        console.log("chosen operator is " + selectOperator);
         let [num1, num2] = getRandomInt();
-        let problem = problemCreators[operator](num1, num2);
+        let problem = problemCreators[selectOperator](num1, num2);
         $(".problemBox").text(problem.problem);
         $("#user-answer").on('input', function(event) {
             let userAnswer = parseInt($(this).val());
